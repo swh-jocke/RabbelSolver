@@ -1,26 +1,46 @@
-﻿
-using System.ComponentModel;
-
-namespace RabbelSolver
+﻿namespace RabbelSolver
 {
     public class Rabbel(Settings settings)
     {
-        private readonly string[] _wordList = GetWordList();
+        private string[] _wordList = GetWordList();
         private readonly List<Tile> _board = GetBoard(settings.Letters);
         private readonly int _minLength = settings.MinLength;
         private readonly int _maxLength = settings.MaxLength;
 
+        private List<string> Letters
+        {
+            get
+            {
+                return _board.Select(x => x.Letter).ToList();
+            }            
+        }
+
         public List<string> Solve()
         {
+            _wordList = ScrubWordList();
             var result = new List<string>();
 
-            foreach (var tile in _board)
+            Parallel.ForEach(_board, tile =>
             {
-                result.AddRange(Process(tile));
-            }
+                var words = Process(tile);
+                lock (result)
+                {
+                    foreach (var word in words)
+                    {
+                        result.Add(word);
+                    }                    
+                }
+            });
 
             return result.Distinct().ToList();
-        }       
+        }
+
+        private string[] ScrubWordList()
+        {
+            return _wordList
+                .Where(x => x.Length >= _minLength && x.Length <= _maxLength && x.Any(x => Letters.Contains(x.ToString())))
+                .ToArray();
+        }
 
         private static List<Tile> GetBoard(string lettersString)
         {
@@ -68,12 +88,12 @@ namespace RabbelSolver
 
             currentTile = _board
                 .Where(x => x.X == currentTile.X + dirX && x.Y == currentTile.Y + dirY)
-            .First();   
+                .First();
 
             if (visited.Any(x => x.x == currentTile.X && x.y == currentTile.Y))
             {
                 return;
-            }            
+            }
 
             part += currentTile.Letter;
 
@@ -89,34 +109,34 @@ namespace RabbelSolver
                     result.Add(part);
                 }
 
-                var newRef = new List<(int x, int y)>(visited)
-                {
-                    (currentTile.X, currentTile.Y)
-                };
+                // Add current tile to the visited list
+                visited.Add((currentTile.X, currentTile.Y));
 
                 // Down
-                GoToTile(currentTile, 0, 1, part, result, newRef);
+                GoToTile(currentTile, 0, 1, part, result, visited);
 
                 // Up
-                GoToTile(currentTile, 0, -1, part, result, newRef);
+                GoToTile(currentTile, 0, -1, part, result, visited);
 
                 // Right
-                GoToTile(currentTile, 1, 0, part, result, newRef);
+                GoToTile(currentTile, 1, 0, part, result, visited);
 
                 // Left
-                GoToTile(currentTile, -1, 0, part, result, newRef);
+                GoToTile(currentTile, -1, 0, part, result, visited);
 
                 // Down right
-                GoToTile(currentTile, 1, 1, part, result, newRef);
+                GoToTile(currentTile, 1, 1, part, result, visited);
 
                 // Down left
-                GoToTile(currentTile, -1, 1, part, result, newRef);
+                GoToTile(currentTile, -1, 1, part, result, visited);
 
                 // Up right
-                GoToTile(currentTile, 1, -1, part, result, newRef);
+                GoToTile(currentTile, 1, -1, part, result, visited);
 
                 // Up left
-                GoToTile(currentTile, -1, -1, part, result, newRef);
+                GoToTile(currentTile, -1, -1, part, result, visited);
+
+                visited.RemoveAt(visited.Count - 1);
             }
         }
     }
