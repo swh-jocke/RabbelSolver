@@ -1,14 +1,15 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\RabbelSolver\\",
+  "WorkspaceRootPath": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D74088F-28C0-4D71-ABAA-1EB41320E8FB}|RabbelSolver2.csproj|c:\\users\\jocke\\documents\\github\\rabbelsolver\\rabbelsolver\\rabbel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D74088F-28C0-4D71-ABAA-1EB41320E8FB}|RabbelSolver2.csproj|solutionrelative:rabbel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F471C8A7-EC18-4FCD-B8F2-6DD1B6AFEC7C}|..\\WebApp\\WebApp.csproj|c:\\users\\jocke\\documents\\github\\rabbelsolver\\webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D74088F-28C0-4D71-ABAA-1EB41320E8FB}|RabbelSolver2.csproj|c:\\users\\jocke\\documents\\github\\rabbelsolver\\rabbelsolver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D74088F-28C0-4D71-ABAA-1EB41320E8FB}|RabbelSolver2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F471C8A7-EC18-4FCD-B8F2-6DD1B6AFEC7C}|..\\WebApp\\WebApp.csproj|c:\\users\\jocke\\documents\\github\\rabbelsolver\\webapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F471C8A7-EC18-4FCD-B8F2-6DD1B6AFEC7C}|..\\WebApp\\WebApp.csproj|c:\\users\\jocke\\documents\\github\\rabbelsolver\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,6 +21,20 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 25,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "..\\WebApp\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "..\\WebApp\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-16T21:54:33.788Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -118,27 +133,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\RabbelSolver\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\RabbelSolver\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T07:43:12.443Z"
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\WebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T17:43:22.247Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Rabbel.cs",
-              "DocumentMoniker": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\RabbelSolver\\Rabbel.cs",
-              "RelativeDocumentMoniker": "Rabbel.cs",
-              "ToolTip": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\RabbelSolver\\Rabbel.cs",
-              "RelativeToolTip": "Rabbel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAWAAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "..\\WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Jocke\\Documents\\GitHub\\RabbelSolver\\WebApp\\Program.cs",
+              "RelativeToolTip": "..\\WebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T07:39:26.183Z",
+              "WhenOpened": "2024-11-16T20:52:50.882Z",
               "EditorCaption": ""
             }
           ]

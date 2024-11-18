@@ -1,4 +1,5 @@
 ﻿
+using Solver;
 using System.Diagnostics;
 using System.Text.Json;
 

@@ -1,4 +1,4 @@
-﻿namespace RabbelSolver
+﻿namespace Solver
 {
     public class Settings
     {

@@ -1,4 +1,4 @@
-﻿namespace RabbelSolver
+﻿namespace Solver
 {
     public readonly struct Tile(int x, int y, string letter)
     {

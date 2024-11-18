@@ -2,3 +2,6 @@
 /obj/*
 /Properties/*
 *.csproj.user
+.vs
+*/*/bin
+*/*/obj

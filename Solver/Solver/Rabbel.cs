@@ -1,4 +1,4 @@
-﻿namespace RabbelSolver
+﻿namespace Solver
 {
     public class Rabbel(Settings settings)
     {
@@ -12,7 +12,7 @@
             get
             {
                 return _board.Select(x => x.Letter).ToList();
-            }            
+            }
         }
 
         public List<string> Solve()
@@ -28,7 +28,7 @@
                     foreach (var word in words)
                     {
                         result.Add(word);
-                    }                    
+                    }
                 }
             });
 
@@ -78,9 +78,9 @@
 
         private void GoToTile(Tile currentTile, int dirX, int dirY, string part, List<string> result, List<(int x, int y)> visited)
         {
-            if (currentTile.X + dirX < 0 || 
-                currentTile.X + dirX > 3 || 
-                currentTile.Y + dirY < 0 || 
+            if (currentTile.X + dirX < 0 ||
+                currentTile.X + dirX > 3 ||
+                currentTile.Y + dirY < 0 ||
                 currentTile.Y + dirY > 3)
             {
                 return;
@@ -104,7 +104,7 @@
 
             if (string.IsNullOrEmpty(part) || _wordList.Any(x => x.StartsWith(part)))
             {
-                if(_wordList.Any(x => x == part && x.Length >= _minLength))
+                if (_wordList.Any(x => x == part && x.Length >= _minLength))
                 {
                     result.Add(part);
                 }
